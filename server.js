@@ -3,12 +3,12 @@ const connectDB = require("./db/connectdb");
 const dotenv = require("dotenv");
 const cors = require("cors");
 
-const todo = require("./routes/Todo");
+const device = require("./routes/device");
 dotenv.config();
 
 const app = express();
 app.use(express.json());
-app.use("/todo", todo);
+app.use("/device", device);
 const port = 4000;
 
 const DATABASE_URL = process.env.DATABASE_URL;
